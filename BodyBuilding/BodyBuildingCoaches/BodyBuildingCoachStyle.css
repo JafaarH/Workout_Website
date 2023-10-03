@@ -1,0 +1,51 @@
+.bdCoach {
+    margin-top: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.bdImageCoach {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    margin: 0 5px 5px 5px;
+}
+
+.bdRatePrice {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.bdMessage, .bdPhoneCall {
+    color: rgb(21, 194, 21);
+    cursor: pointer;
+    font-size: 25px;
+    background-color: white;
+    border: 1px green; 
+    border-radius: 4px;
+}
+
+.bdMessage {
+    margin: 0 10px 5px 5px;   
+}
+
+.bdPhoneCall {
+    margin: 0 5px 4px 10px;
+}
+
+.bdPhoneCall:hover {
+    background-color: rgb(21, 194, 21);
+    color: white
+}
+
+.bdMessage:hover {
+    background-color: rgb(21, 194, 21);
+    color: white
+}
+
+@media (width < 650px) {
+    .bdImageCoach{
+        width: 170px;
+        height: 170px;
+    }
+}

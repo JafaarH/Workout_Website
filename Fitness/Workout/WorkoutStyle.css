@@ -1,0 +1,25 @@
+.imageMovement {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 5px;
+    margin: 0 5px 8px 5px;
+}
+
+.workout {
+    margin-top: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.Lpart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+@media(width < 600px) {
+    .imageMovement {
+        width: 500px;
+        margin-left: 30%;
+    }
+}

@@ -1,0 +1,117 @@
+.shoppingTag {
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.piece {
+    margin-left: 12px;
+    margin-right: 20px;
+}
+
+@media (max-width: 1000px) {
+    .piece {
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+    .changeBttn {
+        font-size: 13px;
+    }
+}
+
+.peopleRunning {
+    width: 100%;
+}
+
+.ImgPeopleRunning {
+    width: 100%;
+    height: 433px;
+}
+
+.welcome {
+    position: absolute;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 433px;
+    width: 36%;
+    top: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.h2 {
+    color: white;
+    margin-left: 5px;
+}
+
+.h3 {
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+.paragraph {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 7%;
+    background-color: #f7f8fa;
+    border: none;
+    width: 85%;
+}
+
+.para {
+    padding: 7px;
+    margin-top: 9px;
+}
+
+.h31 {
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.navbar {
+    height: 56px;
+}
+
+.changeBttn {
+    height: 50px;
+    background-color:rgb(212, 17, 17);
+    border: none;
+    border-radius: 15px;
+}
+
+.changeBttn:hover {
+    background-color: rgb(195, 17, 17);
+}
+
+.textDeco {
+    text-decoration: none!important;
+}
+
+@media (width > 650px) {
+    .disappearTabletSize {
+        display: none !important;
+    }
+}
+
+@media (width < 650px) {
+    .piece, .piece2 , .changeBttn, .shoppingTag {
+        display: none !important;
+    }
+}
+
+.pageNavSide {
+    font-size: 20px;
+    margin: 5px 0 15px 5px;
+    border-bottom: 1px solid rgb(109, 107, 107);
+}
+
+.buttonNavSide {
+    width:90%;
+    margin-left: 5%;
+    height: 50px;
+    margin-top: 17px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(212, 17, 17);
+}

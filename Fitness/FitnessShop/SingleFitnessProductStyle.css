@@ -1,0 +1,89 @@
+.containerOfSingleProductContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.singleProductContainer {
+    display: flex;
+    height: 70%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+@media (width > 930px) {
+    .singleProductContainer {
+        width: 70%;
+    }
+}
+
+.ImageFitnessProduct {
+    width: 220px;
+    height: 280px; 
+    border-radius: 7px;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+
+@media(width < 600px) {
+    .ImageFitnessProduct {
+        width: 150px;
+        height: 210px;
+    }
+}
+
+.button16 , .button26{
+    border: none;
+    width: 10%;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: rgb(94, 171, 243);
+}
+
+.button16:hover , .button26:hover {
+    background-color: rgb(65, 139, 209);
+}
+
+.input6 {
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.buttonAddToCart {
+    margin-top: 30px;
+    width: 55%;
+    font-size: 19px;
+}
+
+.buttonAddToCart:hover {
+    background-color: rgb(65, 139, 209);
+}
+
+@media(width > 1000px) {
+    .buttonAddToCart{
+        width: 40%;
+    }
+}
+
+@media (width < 600px) {
+    .ImageFitnessProduct {
+        width: 150px;
+        height: 210px;
+    }
+    .button16, .button26 {
+        width: 15%;
+    }
+    .buttonAddToCart {
+        font-size: 16px !important;
+        margin-top: 4px;
+    }
+}

@@ -1,0 +1,58 @@
+.coach {
+    margin-top: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.coachImage {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    margin: 0 5px 5px 5px;
+}
+
+.coachLpart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.coachRatePrice {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.message, .phoneCall {
+    color: rgb(21, 194, 21);
+    cursor: pointer;
+    font-size: 25px;
+    background-color: white;
+    border: 1px green; 
+    border-radius: 4px;
+}
+
+.message {
+    margin: 0 10px 5px 5px;   
+}
+
+.phoneCall {
+    margin: 0 5px 4px 10px;
+}
+
+.phoneCall:hover {
+    background-color: rgb(21, 194, 21);
+    color: white
+}
+
+.message:hover {
+    background-color: rgb(21, 194, 21);
+    color: white
+}
+
+@media (width < 650px) {
+    .coachImage{
+        width: 170px;
+        height: 170px;
+    }
+}

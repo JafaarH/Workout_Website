@@ -1,0 +1,106 @@
+.theBigContainer {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerOfImg1 {
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.containerOfImg2{
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mainImg1 {
+    height: 100vh;
+    width: 50vw;
+    background-size: cover;
+}
+
+.mainImg2 {
+    height: 100vh;
+    width: 50vw;
+}
+
+.mainHeading {
+    position: absolute;
+    z-index: 6;
+    color: #c91a34;
+    left: 40%;
+}
+
+@media (max-width: 800px) {
+.mainHeading {
+    position: absolute;
+    z-index: 6;
+    color: #c91a34;
+    left: 29.8%;
+}
+}
+
+@media (width >= 801px ){
+    .mainHeading {
+        left: 33%;
+    }
+}
+
+@media(width > 1000px) {
+    .mainHeading {
+        left: 36%;
+    }
+}
+
+@media (width > 1200px) {
+    .mainHeading {
+        left: 38%;
+    }
+}
+
+@media(width < 600px) {
+    .mainHeading {
+        left: 25%;
+    }
+}
+ 
+.mainHeading41 {
+    position: absolute;
+    z-index: 5;
+    left: 34%;
+    bottom: 41%;
+    color: #e0dcdd; 
+}
+
+@media(width > 1000px) {
+    .mainHeading41{
+        left: 38%;
+    }
+}
+
+@media (width < 600px) {
+    .mainHeading41 {
+        left: 30%;
+    }
+}
+
+.mainHeading42{
+    position: absolute;
+    z-index: 5;
+    color: #e0dcdd;
+    bottom: 38.5%;
+    left: 54%;
+}
+
+.mainImg1:hover {
+    transition: all 0.5s;
+   transform: scale(1.2)
+}
+
+.mainImg2:hover {
+    transition: all 0.5s;
+    transform: scale(1.2)
+}
