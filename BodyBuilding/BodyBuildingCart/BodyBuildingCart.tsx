@@ -5,66 +5,14 @@ import { Badge, Button, Col, Container, Dropdown, Nav, Navbar, Offcanvas, Row } 
 import { BiShoppingBag } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "./BodyBuildingStyle.css";
+import BDNavbar from "../BodyBuildingPage/BDNavbar.tsx"
 
 const BDCart = () => {
     const {dbCartProduct, dbRemoveFromCart, dbTotal} = useContext(Shop)
-    const [show, setShow] = useState(false)
-  const handleShow = () => setShow(true);
-  const handleClose = () => setShow(false)
+    
     return (
         <div>
-            <Navbar bg="dark" data-bs-theme="dark" className="navbar" >
-        <Container fluid>
-            <Link to="/BodyBuilding" className="textDeco">
-          <Navbar.Brand>Haddad's Gym</Navbar.Brand>
-          </Link>
-          <Nav className="m-auto">
-            <Link to="/BodyBuilding/Shop" className="textDeco">
-            <Nav className="navPage2" >Shop</Nav>
-            </Link>
-            <Link to="/BodyBuilding/Coaches" className="textDeco">
-            <Nav className="navPage" >Meet your Coach</Nav>
-            </Link>
-            <Link to="/BodyBuilding/Workout" className="textDeco">
-            <Nav className="navPage" >Workout Plans</Nav>
-            </Link>
-          </Nav>
-          <Link to="/">
-            <button className="changedButton">Changed my mind</button>
-            </Link>
-            <Link to="/BodyBuilding/Cart">
-            <BiShoppingBag className="shoppingBag" />
-            </Link>
-            <Badge bg="dark" className="badge">{dbCartProduct.length}</Badge>
-            <div className="disappearTabletSize">
-            <Button variant="danger" onClick={handleShow} className="me-2">
-        Nav
-      </Button>
-      <Offcanvas placement="end" data-bs-theme="dark" show={show} onHide={handleClose} >
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Navigation Side</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-        <Link to="/BodyBuilding/Shop" className="textDeco">
-            <Nav className="pageNavSide">Shop Page</Nav>
-            </Link>
-            <Link to="/BodyBuilding/Coaches" className="textDeco">
-            <Nav className="pageNavSide">Meet your Coach Page</Nav>
-            </Link>
-            <Link to="/BodyBuilding/Workout" className="textDeco">
-            <Nav className="pageNavSide">Workout Plans Page</Nav>
-            </Link>
-            <Link to="/BodyBuilding/Cart" className="textDeco">
-              <Nav className="pageNavSide">Cart Page</Nav>
-            </Link>
-            <Link to="/">
-              <button className="buttonNavSide">Changed my Mind</button>
-            </Link>
-        </Offcanvas.Body>
-      </Offcanvas>
-            </div>
-        </Container>
-      </Navbar>
+            <BDNavbar />
         {
           dbCartProduct.map((prod:{product:{name:string, price: number, image: StaticImageData}, amount: number},i) => (
            <div key={i} className="dbCartProduct" >
