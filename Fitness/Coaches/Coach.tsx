@@ -9,6 +9,7 @@ import Rating2 from "./Rating2";
 import { AiOutlineMessage } from "react-icons/ai";
 import {FiPhoneCall} from "react-icons/fi";
 import "./CoachesStyle.css";
+import FitnessNavbar from "../FitnessPage/FitnessNavbar.tsx"
 
 const Coach = () => {
     const {cartProducts} = useContext(Shop)
@@ -17,58 +18,7 @@ const Coach = () => {
   const handleClose = () => setShow(false)
     return (
         <div>
-            <Navbar bg="primary" data-bs-theme="dark" className="navbar">
-        <Container fluid>
-            <Link to="/Fitness" className="textDeco">
-          <Navbar.Brand>Haddad's Gym</Navbar.Brand>
-          </Link>
-          <Nav className="m-auto">
-            <Link to="/Fitness/Shop" className="textDeco">
-            <Nav className="piece2">Shop</Nav>
-            </Link>
-            <Link to="/Fitness/Coaches" className="textDeco">
-            <Nav className="piece">Meet your coach</Nav>
-            </Link>
-            <Link to="/Fitness/Workout" className="textDeco">
-            <Nav className="piece" >Workout plans</Nav>
-            </Link>
-          </Nav>
-          <Link to="/" className="textDeco">
-          <button className="changeBttn">Changed my mind</button>
-          </Link>
-          <Link to="/Fitness/Cart" className="textDeco">
-          <BiShoppingBag className="shoppingTag" />
-          </Link>
-          <Badge>{cartProducts.length}</Badge>
-          <div className="disappearTabletSize">
-            <Button variant="success" onClick={handleShow} className="me-2">
-        Nav
-      </Button>
-      <Offcanvas placement="end" data-bs-theme="dark" show={show} onHide={handleClose} >
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Navigation Side</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-        <Link to="/Fitness/Shop" className="textDeco">
-            <Nav className="pageNavSide">Shop Page</Nav>
-            </Link>
-            <Link to="/Fitness/Coaches" className="textDeco">
-            <Nav className="pageNavSide">Meet your Coach Page</Nav>
-            </Link>
-            <Link to="/Fitness/Workout" className="textDeco">
-            <Nav className="pageNavSide">Workout Plans Page</Nav>
-            </Link>
-            <Link to="/Fitness/Cart" className="textDeco">
-              <Nav className="pageNavSide">Cart Page</Nav>
-            </Link>
-            <Link to="/">
-              <button className="buttonNavSide">Changed my Mind</button>
-            </Link>
-        </Offcanvas.Body>
-      </Offcanvas>
-            </div>
-        </Container>
-      </Navbar>
+            <FitnessNavbar />
       {
         CoachesData.map((coach, i) => (
             <div key={i}  className="coach" >
