@@ -12,9 +12,7 @@ import FitnessNavbar from "../FitnessPage/FitnessNavbar.tsx"
 
 const Workout = () => {
     const {cartProducts} = useContext(Shop)
-    const [show, setShow] = useState(false)
-  const handleShow = () => setShow(true);
-  const handleClose = () => setShow(false)
+
     return (
         <div>
             <FitnessNavbar />
