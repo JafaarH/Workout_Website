@@ -10,9 +10,6 @@ import BDNavbar from "./BDNavbar.tsx"
 
 const BodyBuilding = () => {
   const {dbCartProduct} = useContext(Shop)
-  const [show, setShow] = useState(false)
-  const handleShow = () => setShow(true);
-  const handleClose = () => setShow(false)
     return (
         <div>
              <BDNavbar />
