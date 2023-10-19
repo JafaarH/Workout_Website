@@ -5,7 +5,7 @@ import { Badge, Button, Col, Container, Dropdown, Nav, Navbar, Offcanvas, Row } 
 import { BiShoppingBag } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import "./SingleFitnessProductStyle.css"
-
+import FitnessNavbar from "../FitnessPage/FitnessNavbar.tsx"
 
 const SingleFitnessProduct = () => {
   const {showededProduct, addToCart, amount, removeFromShow, addAmount, removeAmount, cartProducts} = useContext(Shop)
@@ -14,58 +14,7 @@ const SingleFitnessProduct = () => {
   const handleClose = () => setShow(false)
     return (
         <div>
-            <Navbar bg="primary" data-bs-theme="dark" className="navbar">
-        <Container fluid>
-            <Link to="/Fitness" className="textDeco">
-          <Navbar.Brand onClick={() => removeFromShow()}>Haddad's Gym</Navbar.Brand>
-          </Link>
-          <Nav className="m-auto">
-            <Link to="/Fitness/Shop" className="textDeco">
-            <Nav className="piece2" onClick={() => removeFromShow()}>Shop</Nav>
-            </Link>
-            <Link to="/Fitness/Coaches" className="textDeco">
-            <Nav className="piece" onClick={() => removeFromShow()}>Meet your coach</Nav>
-            </Link>
-            <Link to="/Fitness/Workout" className="textDeco">
-            <Nav className="piece" onClick={() => removeFromShow()}>Workout plans</Nav>
-            </Link>
-          </Nav>
-          <Link to="/" className="textDeco">
-          <button className="changeBttn" onClick={() => removeFromShow()}>Changed my mind</button>
-          </Link>
-          <Link to="/Fitness/Cart" className="textDeco">
-          <BiShoppingBag className="shoppingTag" onClick={() => removeFromShow()}/>
-          </Link>
-          <Badge>{cartProducts.length}</Badge>
-          <div className="disappearTabletSize">
-            <Button variant="success" onClick={handleShow} className="me-2">
-        Nav
-      </Button>
-      <Offcanvas placement="end" data-bs-theme="dark" show={show} onHide={handleClose} >
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Navigation Side</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-        <Link to="/Fitness/Shop" className="textDeco">
-            <Nav className="pageNavSide" onClick={() => removeFromShow()}>Shop Page</Nav>
-            </Link>
-            <Link to="/Fitness/Coaches" className="textDeco">
-            <Nav className="pageNavSide" onClick={() => removeFromShow()}>Meet your Coach Page</Nav>
-            </Link>
-            <Link to="/Fitness/Workout" className="textDeco">
-            <Nav className="pageNavSide" onClick={() => removeFromShow()}>Workout Plans Page</Nav>
-            </Link>
-            <Link to="/Fitness/Cart" className="textDeco">
-              <Nav className="pageNavSide" onClick={() => removeFromShow()}>Cart Page</Nav>
-            </Link>
-            <Link to="/">
-              <button className="buttonNavSide" onClick={() => removeFromShow()}>Changed my Mind</button>
-            </Link>
-        </Offcanvas.Body>
-      </Offcanvas>
-            </div>
-        </Container>
-      </Navbar>
+           <FitnessNavbar />
       <div className="containerOfSingleProductContainer">
       {
       showededProduct.map((prod:{name: string, qty: number, image: StaticImageData, description: string, price: number}, i)=> (
