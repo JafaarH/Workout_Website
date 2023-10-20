@@ -27,72 +27,53 @@
     width: 50vw;
 }
 
-.mainHeading {
-    position: absolute;
-    z-index: 6;
-    color: #c91a34;
-    left: 40%;
-}
-
-@media (max-width: 800px) {
-.mainHeading {
-    position: absolute;
-    z-index: 6;
-    color: #c91a34;
-    left: 29.8%;
-}
-}
-
-@media (width >= 801px ){
-    .mainHeading {
-        left: 33%;
-    }
-}
-
-@media(width > 1000px) {
-    .mainHeading {
-        left: 36%;
-    }
-}
-
-@media (width > 1200px) {
-    .mainHeading {
-        left: 38%;
-    }
-}
-
-@media(width < 600px) {
-    .mainHeading {
-        left: 25%;
-    }
-}
- 
-.mainHeading41 {
+.containerOfHeading {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
     position: absolute;
     z-index: 5;
-    left: 34%;
-    bottom: 41%;
+}
+
+.mainHeading {
+    color: #c91a34;
+}
+
+.containerOfSecHeading {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: 28px;
+    position: absolute;
+    z-index: 6;
+    top: 56%;
+}
+
+.mainHeading41 {
+    margin-right: 12%;
     color: #e0dcdd; 
 }
 
-@media(width > 1000px) {
-    .mainHeading41{
-        left: 38%;
+@media (width < 490px) {
+    .mainHeading41 {
+        margin-right: 8%;
     }
 }
 
-@media (width < 600px) {
-    .mainHeading41 {
-        left: 30%;
-    }
+.containerOfThrHeading {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    height: 28px;
+    position: absolute;
+    z-index: 6;
+    top: 54%;
 }
 
 .mainHeading42{
-    position: absolute;
-    z-index: 5;
+    margin-left: 12%;
     color: #e0dcdd;
-    bottom: 38.5%;
-    left: 54%;
 }
 
 .mainImg1:hover {
